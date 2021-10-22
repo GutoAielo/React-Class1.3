@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MouseEvent - Mouseover/Mouseout</title>
+  </head>
+  <body>
+    Example of Mouseover and Mouseout
+    <p id="a">Pls, hover the mouse over!</p>
+  </body>
+  <script>
+    var p = document.getElementById('a')
+
+    p.addEventListener('mouseover', mouseOver, false)
+    p.addEventListener('mouseout', mouseOut, false)
+
+    function mouseOver(event) {
+      event.target.innerHTML = 'The mouse has over the element!'
+    }
+
+    function mouseOut(event) {
+      event.target.innerHTML = 'Pls, hover the mouse over!'
+    }
+  </script>
+</html>

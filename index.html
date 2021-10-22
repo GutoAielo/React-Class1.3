@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MouseEvent - MouseDown and MouseUp</title>
+  </head>
+  <body>
+    Example of MouseDown
+    <p id="a">Click Here!</p>
+  </body>
+  <script>
+    let p = document.getElementById('a')
+
+    p.addEventListener(
+      'mousedown',
+      event => (event.target.innerHTML = 'The mouse has pressed!'),
+      false
+    )
+
+    p.addEventListener(
+      'mouseup',
+      event => (event.target.innerHTML = 'The mouse hasn´t pressed!'),
+      false
+    )
+  </script>
+</html>
